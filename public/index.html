@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-class="app.settings.htmlClass">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <title>Task Manager</title>
+
+    <!-- CSS  -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <link href="css/style1.css" type="text/css" rel="stylesheet" />
+    <!-- BOOTSTRAP & FONTAWESOME CSS -->
+    <link href="css/all.css" rel="stylesheet">
+    <link href="css/app.css" rel="stylesheet">
+    
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+    <script src="js/init.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="js/angular/routingCtrl.js"></script>
+    <script type="text/javascript" src="js/angular/loginCtrl.js"></script>
+    <script type="text/javascript" src="js/angular/registerCtrl.js"></script>
+    <script type="text/javascript" src="js/angular/leadCtrl.js"></script>
+    <script type="text/javascript" src="js/angular/resourceCtrl.js"></script>
+    <script type="text/javascript" src="js/angular/managerCtrl.js"></script>
+    
+</head>
+
+<body ng-app="taskApp" ng-class="app.settings.bodyClass">
+    <div ng-view></div>
+</body>
+
+</html>

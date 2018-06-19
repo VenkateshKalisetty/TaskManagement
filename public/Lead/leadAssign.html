@@ -1,0 +1,79 @@
+<!--
+    Lead Task Assign page
+-->
+<div class="navbar navbar-default navbar-size-large navbar-size-xlarge paper-shadow" data-z="0" data-animated role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <div class="navbar-brand navbar-brand-logo">
+                <a class="svg" ui-sref="website-pages.home">
+                    <h3>TASKMANAGER</h3>
+                </a>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="main-nav">
+            <div class="navbar-right">
+                <ul class="nav navbar-nav navbar-nav-margin-right">
+                    <li><a href="#/lead">Home</a></li>
+                    <li><a href="#/leadTaskDetails">Task Details</a></li>
+                    <li><a href="#/leadAssign">Assign Task</a></li>
+                    <li><a href="#/leadSelect">Select Resource</a></li>
+                    <li><a href="#/leadProfile">Profile</a></li>
+                </ul>
+                <a ui-sref="login" class="navbar-btn btn btn-danger" href="#/logout">Log Out <i class="fa fa-sign-out"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div ng-controller="leadAssignCtrl">
+    <div class="content-wrapper">
+        <div class="container">
+            <div class="row pad-botm">
+                <div class="col-md-12">
+                    <h4 class="header-line">LEAD DASHBOARD</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="login-panel panel panel-default">
+                        <div class="panel-heading">
+                            <h3 class="panel-title" style="font-weight:bold;">Assign Task To Resource</h3>
+                        </div>
+                        <div class="panel-body">
+                            <div class="col-md-12 col-sm-8">
+                                <div class="form-group">
+                                    <label>Select Resource </label>
+                                    <select class="form-control" ng-model="filter.email" ng-options="item.email as item.email for item in leadAssignDetails | filter:{project:resProject}">
+										<option value="">--Select resource--</option>
+								    </select>
+                                </div>
+                                <center>
+                                    <h4><b>{{filter.email}}</b></h4>
+                                </center>
+                                <div class="form-group">
+                                    <label>Task Description</label>
+                                    <textarea class="form-control" rows="3" ng-model="resourceTask"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-success" ng-click="assignTask()">Assign Task</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    <strong>MSS</strong> &copy; Copyright 2017
+</footer>
+<!-- // Footer -->
+

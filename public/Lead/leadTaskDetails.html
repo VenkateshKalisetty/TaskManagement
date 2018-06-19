@@ -1,0 +1,83 @@
+<!--
+    Assigned tasks details for resources page
+-->
+<div class="navbar navbar-default navbar-size-large navbar-size-xlarge paper-shadow" data-z="0" data-animated role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <div class="navbar-brand navbar-brand-logo">
+                <a class="svg" ui-sref="website-pages.home">
+                    <h3>TASKMANAGER</h3>
+                </a>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="main-nav">
+            <div class="navbar-right">
+                <ul class="nav navbar-nav navbar-nav-margin-right">
+                    <li><a href="#/lead">Home</a></li>
+                    <li><a href="#/leadTaskDetails">Task Details</a></li>
+                    <li><a href="#/leadAssign">Assign Task</a></li>
+                    <li><a href="#/leadSelect">Select Resource</a></li>
+                    <li><a href="#/leadProfile">Profile</a></li>
+                </ul>
+                <a ui-sref="login" class="navbar-btn btn btn-danger" href="#/logout">Log Out <i class="fa fa-sign-out"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ng-controller="leadTaskDetailsCtrl">
+    <div class="content-wrapper">
+        <div class="container">
+            <div class="row pad-botm">
+                <div class="col-md-12">
+                    <h4 class="header-line">LEAD DASHBOARD</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <label>Resource Task Details</label>
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>S No</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
+                                            <th>Task</th>
+                                            <th>Assigned on</th>
+                                            <th>Status</th>
+                                            <th>Comments</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="lt in resProfile | filter:{project:leadProject}">
+                                            <div <ng-switch="($index)==0">
+                                                <td>{{$index+1}}</td>
+                                                <td>{{lt.name}}</td>
+                                                <td>{{lt.email}}</td>
+                                                <td>{{lt.task}}</td>
+                                                <td>{{lt.date}}</td>
+                                                <td>{{lt.status}}</td>
+                                                <td>{{lt.comments}}</td>
+                                            </div>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

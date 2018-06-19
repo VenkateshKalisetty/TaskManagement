@@ -1,0 +1,61 @@
+<!--
+    Resource Home page
+-->
+<div class="navbar navbar-default navbar-size-large navbar-size-xlarge paper-shadow" data-z="0" data-animated role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <div class="navbar-brand navbar-brand-logo">
+                <a class="svg" ui-sref="website-pages.home">
+                    <h3>TASKMANAGER</h3>
+                </a>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" id="main-nav">
+            <div class="navbar-right">
+                <ul class="nav navbar-nav navbar-nav-margin-right">
+                    <li><a href="#/resource">Home</a></li>
+                    <li><a href="#/resourceTaskDetails">Task Details</a></li>
+                    <li><a href="#/resourceProfile">Profile</a></li>
+                </ul>
+                <a ui-sref="login" class="navbar-btn btn btn-danger waves-effect waves-light" href="#/logout">Log Out <i class="fa fa-sign-out"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div ng-controller="resourceCtrl">
+    <div class="content-wrapper">
+        <div class="container">
+            <div class="row pad-botm">
+                <div class="col-md-12">
+                    <h4 class="header-line">RESOURCE DASHBOARD</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="col-md-12 col-sm-8">
+                                <div class="well">
+                                    <h4>Welcome {{resourceProfile.name}}....!!!</h4>
+                                    <h5>Your task related to <span style="font-weight:bold;">{{resourceProfile.project}}</span> project assigned on <span style="font-weight:bold;">{{resourceProfile.date}}</span> by <span style="font-weight:bold;">{{resourceProfile.assignby}}</span></h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+<footer class="footer">
+    <strong>MSS</strong> &copy; Copyright 2017
+</footer>
+<!-- // Footer -->
